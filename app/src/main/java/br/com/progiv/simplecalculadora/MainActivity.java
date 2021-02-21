@@ -169,6 +169,82 @@ public class MainActivity extends AppCompatActivity {
                 Total = 0;
             }
         });
+
+        //botoes de ação:
+        btnSoma.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(Result[1]!=0){   //Correção do bug daqui
+                    calcular();
+                    exibirResultado();
+                    Total = 0;
+                    count = 0;
+                }                   //ate aqui
+                operacao = "soma";
+                proximoNumero();
+
+            }
+        });
+
+        btnSub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(Result[1]!=0){   //Correção do bug daqui
+                    calcular();
+                    exibirResultado();
+                    Total = 0;
+                    count = 0;
+                }                   //ate aqui
+
+                operacao = "sub";
+                proximoNumero();
+            }
+        });
+
+        btnMult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(Result[1]!=0){   //Correção do bug daqui
+                    calcular();
+                    exibirResultado();
+                    Total = 0;
+                    count = 0;
+                }                   //ate aqui
+                operacao = "mult";
+                proximoNumero();
+            }
+        });
+
+        btnDiv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(Result[1]!=0){   //Correção do bug daqui
+                    calcular();
+                    exibirResultado();
+                    Total = 0;
+                    count = 0;
+                }                   //ate aqui
+                operacao = "div";
+                proximoNumero();
+            }
+        });
+
+        btnIgual.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calcular();
+                exibirResultado();
+                Total = 0;
+                count = 0;
+            }
+        });
+
+        btnLimp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                limpar();
+            }
+        });
     }
 
     //exibição em tela:
